@@ -1,0 +1,103 @@
+:root {
+    --primary-color: cornflowerblue;
+}
+
+.logo {
+    float: left;
+
+}
+
+.A {
+    color: blue;
+}
+
+.titre {
+    float: initial;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary-color);
+}
+
+
+
+.active {
+    border-color: black;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#apprendre {
+    float: inherit;
+}
+
+.apprendre {
+    float: inherit;
+}
+
+#mentor {
+    float: right;
+}
+
+.mentor {
+    float: right;
+}
+
+#travail {
+    float: inherit;
+}
+
+.travail {
+    float: inherit;
+}
+
+.image {
+    display: inline;
+}
+
+.form-group {
+    color: black;
+}
+
+.Inscription {
+    background: url("cours inscription.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+footer {
+    background: cornflowerblue;
+    color: white;
+    padding: 20px 0 10px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: gold;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+}

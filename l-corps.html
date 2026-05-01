@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L-corps </title>
+    <link rel="shortcut icon" href="logo l-corps1.png">
+    <meta name="description"
+        content="L-corps - Votre partenaire en solutions informatiques à l'international. Développement, cybersécurité, hébergement, maintenance." />
+
+    <!-- Favicon -->
+
+    <!-- Google Fonts: Courier Prime (similaire à Courier New mais plus propre sur le web) -->
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        :root {
+            --primary: #001f3f;
+            /* Bleu nuit profond (tech & confiance) */
+            --secondary: #00d4d4;
+            /* Cyan vif (moderne, énergie malgache) */
+            --accent: #ff851b;
+            /* Orange vif (soleil de Mada, dynamisme) */
+            --dark: #0a0a0a;
+            --light: #f8f9fa;
+            --gray: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier Prime', monospace;
+            background: var(--dark);
+            color: #e0e0e0;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Background image fixe avec overlay sombre */
+        .bg-image {
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)),
+                url('l-corps image.jpg') center center / cover fixed;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 31, 63, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--secondary);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .mobile-menu {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--secondary);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 212, 212, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 212, 0.5);
+        }
+
+        /* Sections générales */
+        section {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--secondary);
+        }
+
+        /* À propos */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 212, 212, 0.2);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            transition: 0.5s;
+        }
+
+        .about-img:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(0, 212, 212, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.4s;
+            border: 1px solid rgba(0, 212, 212, 0.2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            background: rgba(0, 212, 212, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 212, 212, 0.2);
+        }
+
+        .service-card i {
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info i {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        input,
+        textarea {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--secondary);
+            border-radius: 8px;
+            color: #fff;
+            font-family: 'Courier Prime', monospace;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #aaa;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 3px solid var(--secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background: var(--primary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 2rem 0;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                height: 90vh;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-image">
+
+    <header id="header">
+        <nav>
+            <a href="#" class="logo"><img src="logo l-corps1.png " alt="" width="40px" height="40px">
+                L-<span>corps</span></a>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>L-corps</h1>
+            <p>Votre partenaire numérique à l'international<br>Développement • Cybersécurité • Infrastructure •
+                Innovation
+            </p>
+            <a href="#contact" class="btn">Commencer un projet</a>
+        </div>
+    </section>
+
+    <section id="apropos">
+        <h2>À propos</h2>
+        <div class="about-grid">
+            <div>
+                <h3>Excellence informatique <span style="color:var(--secondary)">made in Madagascar</span></h3>
+                <p>TechMada Solutions est une entreprise malgache spécialisée dans les solutions informatiques modernes.
+                    Depuis notre création, nous accompagnons les entreprises et institutions dans leur transformation
+                    numérique avec des solutions fiables, sécurisées et adaptées au contexte local.</p><br>
+                <p>Nos équipes combinent expertise technique internationale et parfaite connaissance du marché malgache.
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&q=80"
+                    alt="Équipe TechMada">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background: rgba(0,0,0,0.7);">
+        <h2>Nos Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Développement Web & Mobile</h3>
+                <p>Applications sur mesure, sites vitrine, e-commerce, solutions métier</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cybersécurité</h3>
+                <p>Audit, protection des données, formation, réponse aux incidents</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-server"></i>
+                <h3>Infrastructure & Cloud</h3>
+                <p>Hébergement, serveurs dédiés, solutions cloud hybrides</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>Maintenance & Support</h3>
+                <p>Contrats de maintenance, assistance 24/7, télémaintenance</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>On est là pour vous !</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lot II Y 45 Bis Ankorondrano, Antananarivo</p>
+                <p><i class="fas fa-phone"></i> +230 5518 0137</p>
+                <p><i class="fas fa-envelope"></i> l-corps@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Lun-Ven: 8h-18h | Sam: 9h-13h</p>
+            </div>
+            <form>
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <input type="text" placeholder="Sujet">
+                <textarea rows="6" placeholder="Votre message..."></textarea>
+                <button type="submit" class="btn">Envoyer le message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TechMada Solutions - Tous droits réservés | Fierté malgache en informatique</p>
+    </footer>
+
+    <script>
+        // Menu mobile
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+
+        // Header scroll effect
+        window.addEventListener("scroll", function () {
+            const header = document.getElementById("header");
+            if (window.scrollY > 100) {
+                header.style.background = "rgba(0, 31, 63, 0.98)";
+                header.style.padding = "0.5rem 0";
+            } else {
+                header.style.background = "rgba(0, 31, 63, 0.95)";
+                header.style.padding = "1rem 0";
+            }
+        });
+    </script>
+</body>
+
+</html>

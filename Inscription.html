@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSCRIPTION</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="cybercenter3.png">
+    <style>
+        body {
+            background: url("cours page .png "), no-repeat;
+
+            background-position: center;
+            animation: moveBg 20s linear infinite;
+        }
+
+        @keyframes moveBg {
+            from {
+                background-position: 0% 0%;
+            }
+
+            to {
+                background-position: 100% 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="Inscription">
+    <header>
+        <div class="header-titles">
+            <h1 class="header-title-3d"><img src="cybercenter2.0.png" alt="logo" class="logo" width="110px"
+                    height="120px"><span class="titre">CYBERCENTER</span> </h1>
+        </div>
+        <nav class="A">
+            <a href="index.html" title="Cliquez ici pour acceder"
+                style="border: width 3px; ;border-color: black;border-style: solid;background-color: cornflowerblue;">🏡ACCUEIL</a>
+            <a href="serveur.html" title="Cliquez ici pour acceder"
+                style="border: width 3px; ;border-color: black;border-style: solid;background-color: cornflowerblue;">🌐SERVEUR</a>
+            <a href="mail.html" title="Cliquez ici pour acceder"
+                style="border: width 3px; ;border-color: black;border-style: solid;background-color: cornflowerblue;">📧E-MAIL</a>
+            <a href="inscription.html" class="active" title="Cliquez ici pour acceder"
+                style="border: width 3px; ;border-color: black;border-style: solid;background-color: cornflowerblue;">📂INSCRIPTION</a>
+            <a href="photo.html" title="Cliquez ici pour acceder"
+                style="border: width 3px; ;border-color: black;border-style: solid;background-color: cornflowerblue;">📘COURS</a>
+            <a href="sms.html" title="Cliquez ici pour acceder"
+                style="border: width 3px; ;border-color: black;border-style: solid;background-color: cornflowerblue;">🎭A
+                PROPOS</a>
+        </nav>
+    </header>
+
+
+    <main class="content">
+        <h2>Contenu du fichier inscription</h2>
+        <form action="#" method="POST" class="form-3d">
+            <div class="form-groupe yellow-bg">
+                <label for="pays">Dans quel pays habitez-vous </label>
+                <select id="pays" name="pays">
+                    <optgroup label="Europe">
+                        <option value="france">France</option>
+                        <option value="espagne">Espagne</option>
+                        <option value="italie">Italie</option>
+                        <option value="royaume-uni">Royaume-Uni</option>
+                        <option value="allemagne">Allemagne</option>
+                        <option value="suede">Suède</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="norvege">Norvège</option>
+                        <option value="pays-bas">Pays-bas</option>
+                        <option value="belgique">Belgique</option>
+                        <option value="roumanie">Roumanie</option>
+                        <option value="suisse">Suisse</option>
+                    </optgroup>
+                    <optgroup label="Amerique">
+                        <option value="canada">Canada</option>
+                        <option value="etats-unis">Etats-Unis</option>
+                        <option value="bresil">Brésil</option>
+                        <option value="argentine">Argentine</option>
+                        <option value="mexique">Mexique</option>
+                        <option value="uruguay">Uruguay</option>
+                        <option value="colombie">Colombie</option>
+                        <option value="equateur">Equateur</option>
+                    </optgroup>
+                    <optgroup label="Asie">
+                        <option value="chine">Chine</option>
+                        <option value="japon">Japon</option>
+                        <option value="inde">Inde</option>
+                        <option value="thailande">Thailande</option>
+                        <option value="mongoly">Mongoly</option>
+                        <option value="malaisie">Malaisie</option>
+                        <option value="russie">Russie</option>
+                    </optgroup>
+                    <optgroup label="Afrique">
+                        <option value="madagascar">Madagascar</option>
+                        <option value="cameroun">Cameroun</option>
+                        <option value="egypte">Egypte</option>
+                        <option value="maurice">Ile Maurice</option>
+                        <option value="mali">Mali</option>
+                        <option value="comores">Comores</option>
+                        <option value="Afrique du sud">Afrique du Sud</option>
+                    </optgroup>
+                </select>
+            </div>
+            <h3>VOS COORDONNEES</h3>
+            <div class="form-group">
+
+                <label for="nom">QUEL EST VOTRE NOM?</label>
+                <input type="text" id="nom" name="nom" title="Entrez votre nom">
+
+                <label for="prenom">QUEL EST VOTRE PRENOM?</label>
+                <input type="text" id="prenom" name="prenom" title="Entrez votre prénom"> <br> <br>
+
+                <label for="email">QUEL EST VOTRE E-MAIL?</label>
+                <input type="email" id="email" name="email" title="Entrez votre E-mail">
+                <label for="email">QUEL EST VOTRE NUMERO DE TELEPHONE?</label>
+                <input type="tel" id="email" name="adresse" title="Entrez votre mobile"><br> <br>
+
+                <label for="email">QUELLE EST VOTRE DATE DE NAISSANCE?</label>
+                <input type="date" id="email" name="date" title="Entrez votre date de naissance">
+
+                <label for="email">QUELLE EST VOTRE ADRESSE?</label>
+                <input type="text" id="email" name="adresse" title="Entrez votre adresse"><br> <br>
+
+                <label for="email">QUEL EST VOTRE N° PASSEPORT/CIN?</label>
+                <input type="number,text" id="email" name="email" title="Entrez votre identité">
+
+                <h2 style="color: black;">QUELLES COURS ALLEZ-VOUS SUIVRE?</h2>
+                <select name="" id="">
+
+                    <optgroup>
+                        <option value=""></option>
+                        <option value="architecture">Architecture des ordinateurs</option>
+                        <option value="programmation">Programmation</option>
+                        <option value="analyse">Analyse de données</option>
+                    </optgroup><br> <br>
+                </select>
+                <p>Si vous avez choisi la programmation, quel language voulez-vous apprendre?</p>
+                <select name="" id="">
+
+                    <optgroup>
+                        <option value=""></option>
+                        <option value="architecture">Python</option>
+                        <option value="programmation">HTML/CSS</option>
+                        <option value="analyse">JavaScript</option>
+                        <option value="analyse">C</option>
+                        <option value="analyse">C++</option>
+                        <option value="analyse">Java</option>
+                    </optgroup><br> <br>
+                </select>
+
+            </div>
+
+            <div class="form-groupe">
+                <h3>Pourquoi voulez-vous suivre nos cours ?</h3>
+                <p>CLIQUEZ SUR UN DES SOUHAITS DANS LA LISTE:</p>
+                <div style="color: black;">
+                    <label><input type="radio" name="souhait" value="riche"> ETRE RICHE</label>
+                    <label><input type="radio" name="souhait" value="celebre"> AVOIR DE L'EXPERIENCE</label>
+                    <label><input type="radio" name="souhait" value="beau"> JUSTE POUR LE PLAISIR</label>
+                    <label><input type="radio" name="souhait" value="sante"> SANS RAISON
+                    </label>
+                </div>
+            </div>
+            <br><br><label for="email">A QUELLE HEURE, VOUS ALLEZ ENVOYER VOTRE INSCRIPTION?</label>
+            <input type="time" id="email" name="adresse">
+            <div class="submit-button">
+
+                <script type=" text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+</script>
+                <script>
+                    (function () {
+                        emailjs.init('TON_USER_ID'); // remplace par ton user ID EmailJS
+                    })();
+
+
+                </script>
+                <button type="submit" onclick="sendEmail()">Envoyer </button>
+                </script>
+            </div>
+
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><em>L-corps</em></h3>
+                    <p>L'homme est ignorant au première âge de sa vie,mais il s'instruit.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <p><a href="index.html">Accueil</a></p>
+                    <p><a href="Inscription.html">Inscription</a></p>
+                    <a href="photo.html">Cours</a></p>
+                    <p><a href="sms.html">À Propos</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="lelackwarren@gmail.com">lelackwarren@gmail.com</a></p>
+                    <p>WhatsApp: ‪+230 55 18 01 37‬</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61579237553534" target="_blank"
+                            title="Cliquez ici pour voir"><img src="téléchargement copy.png" alt="facebook" width="30px"
+                                height="30px"></a>
+                        <a href="https://www.instagram.com/lelackwarren/" target="_blank"
+                            title="Cliquez ici pour voir"><img src="insta.png" alt="instagram" width="30px"
+                                height="30px"></a>
+                        <a href="https://www.youtube.com/@w-tech-h6u" target="_blank" title="Cliquez ici pour voir"><img
+                                src="youtube.png" alt="youtube" width="30px" height="30px"></a>
+                        <a href="https://x.com/WLelack63247" target="_blank" title="Cliquez ici pour voir"><img
+                                src="Twitter.png" alt="Twitter" width="30px" height="30px"></a>
+                        <a href="https://www.threads.com/@warren_lwk?xmt=AQF05D-vJXiN8nTRWvuhfBDpvkfzMeH1CILm2G_91p1HJOg"
+                            target="_blank" title="Cliquez ici pour voir"><img src="threads.png" alt="Threads"
+                                width="30px" height="30px"></a>
+                        <a href="https://www.tiktok.com/@warren.lwk_11" target="_blank"
+                            title="Cliquez ici pour voir"><img src="tik tok.png" alt="Tiktok" width="30px"
+                                height="30px"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cybercenter-LWK. Tous droits réservés.</p>
+            </div>
+        </div>
+            
+    </footer>
+    </footer>
+
+</body>
+
+</html>
